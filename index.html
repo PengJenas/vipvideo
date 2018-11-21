@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<!-- 简单的手机端自适应：网页初始大小占屏幕面积的100% -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
+	<meta charset="utf-8">
+	<title>VIP视频免费看</title>
+	<!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
+	<style>
+		*{
+   		 margin:0;
+   		 padding:0;
+		}
+		body{
+	    font-family:"微软雅黑";
+	    background-color:#ddd;
+		}
+		.box {
+			/*之前用的水平、垂直居中
+			position: absolute;  
+			left: 50%;
+			top: 38%;
+			transform: translate(-50%,-50%);
+			width: 400px;*/
+
+
+			width: 90%;
+			/*width: 320px;*/	
+   		    /*height:600px;*/
+			margin:30px auto;
+			padding:20px;
+			background-color: #fff
+		}	
+		.textbox {
+			width: 100%;
+			height: 32px;
+			font-size: 18px;
+		}
+		.button {
+			cursor: pointer;	/*光标变成小手*/
+			width: 100%;
+			height: 40px;
+			background: #444444;
+			color:#FFFFFF;			
+			text-align:center;			
+			font-size: 18px;
+			line-height: 40px;
+		}
+		.button:hover{ 
+			background: #BBBBBB;
+			color:#444444;	
+		}
+	</style>
+	<script> 
+		function geturl(){ 
+		//获取选中的解析网址
+		var api = document.getElementById("mySelect");
+		var apiUrl = api.options[api.selectedIndex].value;
+		//获取输入的视频网址
+		var inputUrl = document.getElementById("vipUrl").value;
+		var myUrl = apiUrl + inputUrl; 
+		window.open(myUrl);
+		} 
+	</script> 
+</head>
+
+<body> 
+	<div class="box" >
+		<p align="center"><b style="font-size:28px;color:#444444;">VIP视频免费看</b></p>
+		<p align="right"><i style="font-size:14px;color:#888888;">By Jenas &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</i></p>
+		<b style="font-size: 20px;color:#444444">选择视频解析线路：</b><br>
+		<select id="mySelect" class="textbox" >
+			<!--VIP视频解析线路-->
+			<option value="http://kx28.com/vip/index.php?url=" >【开心影吧】</option>
+			<option value="http://api.pucms.com/?url=" >【品优】</option>
+			<option value="http://api.nobij.top/jx/?url=" >【18云解析】</option>  
+			<option value="http://api.baiyug.cn/vip/index.php?url=&url=">【百域阁】</option>
+			<option value="https://api.vparse.org/?url=" >【vparse】</option>
+			<option value="http://appapi.svipv.kuuhui.com/plje/?id=" >【酷绘】</option>
+			<option value="https://api.pangujiexi.com/player.php?url=" >【盘古解析】</option>
+			<option value="http://api.91exp.com/svip/?url=" >【减肥影视】</option>
+			<option value="http://www.82190555.com/index/qqvod.php?url=" >【无名小站】</option>
+			<option value="http://www.sfsft.com/admin.php?url=" >【无名小站2】</option>
+			<option value="http://vip.jlsprh.com/index.php?url=" >【jlsprh】</option>
+			<option value="http://player.jidiaose.com/supapi/iframe.php?v=" >【jidiaose】</option>
+			<option value="http://jx.hezeshi.net/vip/jlexi.php?url=" >【http_hezeshi】</option>
+			<option value="https://jx.hezeshi.net/vip/jlexi.php?url=" >【https_hezeshi】</option>
+			<option value="http://www.idhyp.cn/index.php?url=" >【宏凯】</option>
+			<option value="http://at520.cn/jx/?url=" >【爱淘影音】</option>
+			<option value="http://api.greatchina56.com/?url=" >【618G】</option>
+			<option value="https://jx.618g.com/?url=" >【618G_2】</option>
+			<option value="http://17kyun.com/api.php?url=" >【17K云播】</option>
+			<option value="http://aikan-tv.com/?url=" >【ODFLV】</option>
+			<option value="http://jqaaa.com/jx.php?url=" >【金桥解析】</option>
+			<option value="http://www.1717yun.com/jx/vip/index.php?url=" >【1717云】</option>
+			<option value="http://j.zz22x.com/jx/?url=" >【花园影视】</option>
+			<option value="http://api.bbbbbb.me/vip/?url=" >【思古解析】</option>
+			<option value="http://jx.lache.me/cc/?url=" >【拉车解析】</option>
+			<option value="https://jiexi.071811.cc/jx.php?url="  selected="">【石头解析】</option>
+			<option value="http://jx.api.163ren.com/vod.php?url=" >【163人】</option>
+			<option value="http://api.xfsub.com/index.php?url=" >【旋风解析】</option>
+			<option value="http://api.nepian.com/ckparse/?url=" >【那片解析】</option>
+			<option value="http://www.vipjiexi.com/yun.php?url=" >【wq114】</option>
+			<option value="http://vip.600tv.cn/jx/?url=" >【600tv】</option>
+			<option value="http://jx.598110.com/zuida.php?url=" >【598110】</option>
+			<option value="http://www.freeget.org/jx.php?url=" >【FreeGet】</option>
+			<option value="http://api.xiaomil.com/a/index.php?url=" >【xiaomil】</option>
+			<option value="http://goudidiao.com/?url=" >【够低调】</option>
+			<option value="http://www.sonimei.cn/?url=" >【搜你妹】</option>
+			<option value="https://jx.maoyun.tv/index.php?id=" >【猫云】</option>
+			<option value="http://q.z.vip.totv.72du.com/?url=" >【VIP看看】</option>
+			<option value="http://v.renrenfabu.com/jiexi.php?url=" >【人人发布】</option>
+			<!--VIP视频解析线路-->
+		</select>
+		<br><br>
+		<b style="font-size: 20px;color:#444444">输入VIP视频链接：</b>
+		<br>
+		<input type="text" id="vipUrl" class="textbox" placeholder="例：http://www.iqiyi.com/v_19rrbooge4.html" />
+		<br><br>
+		<div class="button" onclick="geturl();">
+			<b>点击观看VIP视频</b>
+		</div>
+	</div>
+</body>
+</html>
