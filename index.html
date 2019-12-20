@@ -1,99 +1,110 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<!-- 简单的手机端自适应：网页初始大小占屏幕面积的100% -->
-	<meta name="viewport" content="width=device-width,initial-scale=1.0">	
-	<meta charset="utf-8">
-	<title>VIP视频免费看</title>
-	<!-- <link rel="shortcut icon" href="./favicon.ico" /> -->
-	<style>
-		*{
-   		 margin:0;
-   		 padding:0;
-		}
-		body{
-	    font-family:"微软雅黑";
-	    background-color:#ddd;
-		}
-		.box {
-			/*之前用的水平、垂直居中
-			position: absolute;  
-			left: 50%;
-			top: 38%;
-			transform: translate(-50%,-50%);
-			width: 400px;*/
-
-
-			width: 90%;
-			/*width: 320px;*/	
-   		    /*height:600px;*/
-			margin:30px auto;
-			padding:20px;
-			background-color: #fff
-		}	
-		.textbox {
-			width: 100%;
-			height: 32px;
-			font-size: 18px;
-		}
-		.button {
-			cursor: pointer;	/*光标变成小手*/
-			width: 100%;
-			height: 40px;
-			background: #444444;
-			color:#FFFFFF;			
-			text-align:center;			
-			font-size: 18px;
-			line-height: 40px;
-		}
-		.button:hover{ 
-			background: #BBBBBB;
-			color:#444444;	
-		}
-	</style>
-	<script> 
-		function geturl(){ 
-		//获取选中的解析网址
-		var api = document.getElementById("mySelect");
-		var apiUrl = api.options[api.selectedIndex].value;
-		//获取输入的视频网址
-		var inputUrl = document.getElementById("vipUrl").value;
-		var myUrl = apiUrl + inputUrl; 
-		window.open(myUrl);
-		} 
-	</script> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VIP视频免费看</title>
+    <!-- <link rel="icon" href="./favicon.ico" /> -->
+    <style type="text/css">
+        *{
+            margin:0;
+            padding:0;
+        }
+        body{
+            font-family:"微软雅黑";
+            background-color:rgba(0,0,255,0.2);
+        }
+        .box {
+            position: absolute;
+            left: 50%;
+            top: 40%;
+            transform: translate(-50%,-50%);
+            /* 当使用：top: 50%;left: 50%;， 是以左上角为原点，故不处于中心位置
+            translate(-50%,-50%) 作用是，往上（x轴）,左（y轴）移动自身长宽的 50%，以使其居于中心位置 */
+            width: 80%;
+            padding:20px;
+            background-color: #fff;
+            /* margin:5% auto; */
+        }
+        #myselect {
+            width: 100%;
+            padding: 8px;
+            font-size: 18px;
+        }
+        #vipurl {
+            width: 98%;
+            padding: 8px;
+            font-size: 18px;
+        }
+        .button {
+            /* 光标变成小手 */
+            
+            cursor: pointer;
+            width: 100%;
+            height: 40px;
+            background: #444444;
+            color:#FFFFFF;
+            text-align:center;
+            font-size: 18px;
+            line-height: 40px;
+            border:none;
+        }
+        .button:hover{ 
+            background: #BBBBBB;
+            color:#444444;
+        }
+    </style>
+    <script> 
+        function geturl(){ 
+            //获取选中的解析网址
+            var api = document.getElementById("myselect");
+            var apiUrl = api.options[api.selectedIndex].value;
+            //获取输入的视频网址
+            var inputUrl = document.getElementById("vipurl").value;
+            var myUrl = apiUrl + inputUrl; 
+            window.open(myUrl);
+        }
+    </script> 
 </head>
 
 <body> 
-	<div class="box" >
-		<p align="center"><b style="font-size:28px;color:#444444;">VIP视频免费看</b></p>
-		<p align="right"><i style="font-size:14px;color:#888888;">By Jenas &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</i></p>
-		<b style="font-size: 20px;color:#444444">选择视频解析线路：</b><br>
-		<select id="mySelect" class="textbox" >
-			<!--VIP视频解析线路-->
-			<option>====新增线路====</option>
-			<option value="http://jx.drgxj.com/?url=" >【新增1】</option>
-			<option value="http://jx.598110.com/?url=" >【新增2】</option>
-			<option value="https://api.sigujx.com/jx/?url=" >【新增3】</option>
-			<option>====实测可用====</option>
-			<option value="http://jx.ejiafarm.com/dy.php?url=" >【穷二代解析】</option>
-			<option value="http://jiexi.071811.cc/jx.php?url=" >【石头解析】</option>
-			<option value="http://jqaaa.com/jx.php?url=" >【金桥解析】</option>
-			<option value="http://at520.cn/jx/?url=" >【爱淘影音】</option>
-			<option value="http://17kyun.com/api.php?url=" >【17K云播】</option>
-			<option value="http://www.1717yun.com/jx/vip/index.php?url=" >【1717云】</option>
-			<option value="http://jx.598110.com/zuida.php?url=" >【598110】</option>
-			<option value="http://www.freeget.org/jx.php?url=" >【FreeGet】</option>
-			<!--VIP视频解析线路-->
-		</select>
-		<br><br>
-		<b style="font-size: 20px;color:#444444">输入VIP视频链接：</b>
-		<br>
-		<input type="text" id="vipUrl" class="textbox" placeholder="例：http://www.iqiyi.com/v_19rrbooge4.html" />
-		<br><br>
-		<div class="button" onclick="geturl();">
-			<b>点击观看VIP视频</b>
-		</div>
-	</div>
+    <div class="box" >
+        <p align="center">
+            <b style="font-size:28px;color:#444444;">VIP视频免费看</b>
+            <small><i style="color:#888888;">By Jenas</i></small>
+        </p>
+        <!-- <form> -->
+            <label>
+                <p><b style="font-size: 20px;color:#444444">选择视频解析线路：</b></p>
+                <select id="myselect" class="textbox" >
+                    <!--VIP视频解析线路-->
+                    <optgroup label="默认线路">
+                        <option value="http://vip.wandhi.com/?v=" >【玩的嗨】</option>
+                    </optgroup>
+                    <optgroup label="实测可用">
+                        <option value="http://jx.drgxj.com/?url=" >【新增1】</option>
+                        <option value="http://jx.598110.com/?url=" >【新增2】</option>
+                        <option value="https://api.sigujx.com/jx/?url=" >【新增3】</option>
+                        <option value="http://jx.ejiafarm.com/dy.php?url=" >【穷二代解析】</option>
+                        <option value="http://jiexi.071811.cc/jx.php?url=" >【石头解析】</option>
+                        <option value="http://jqaaa.com/jx.php?url=" >【金桥解析】</option>
+                        <option value="http://at520.cn/jx/?url=" >【爱淘影音】</option>
+                        <option value="http://17kyun.com/api.php?url=" >【17K云播】</option>
+                        <option value="http://www.1717yun.com/jx/vip/index.php?url=" >【1717云】</option>
+                        <option value="http://jx.598110.com/zuida.php?url=" >【598110】</option>
+                        <option value="http://www.freeget.org/jx.php?url=" >【FreeGet】</option>
+                    </optgroup>
+                    <!--VIP视频解析线路-->
+                </select>
+            </label>
+            <br><br>
+            <label>
+                <p><b style="font-size: 20px;color:#444444">输入VIP视频链接：</b></p>
+                <input type="url" id="vipurl" name="vipurl" placeholder="例：http://www.iqiyi.com/v_19rrbooge4.html" required >
+            </label>
+            <br><br>
+            <input type="submit" class="button" value="点击观看VIP视频" onclick="geturl()">
+        <!-- </form> -->
+    </div>
 </body>
 </html>
